@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curd Javascript</title>
+    <!-- Custom File BootStrap -->
+    <link rel="stylesheet" href="/style/bootstrap.min.css">
+    <!-- Custom File FontAwesome -->
+    <link rel="stylesheet" href="../style/all.min.css">
+    <!-- Custom File Css Style -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <section id="langing">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="mb-4">
+            <label for="productName"  class="mb-2">Product Name :
+                <i class="fas fa-cart-plus"></i>
+            </label>
+            <input onkeyup="validName()" type="text" class="form-control" id="productName">
+            <div class="alert alert-danger d-none">Plase Enter Your Name Product...!</div>
+        </div>
+        <div class="mb-4">
+            <label for="productPrice"  class="mb-2">Product Price :
+                <i class="fa-solid fa-money-check-dollar"></i>
+            </label>
+            <input onkeyup="validPrice()" type="text" class="form-control" id="productPrice">
+            <div id="price" class="alert alert-danger d-none">Enter Price Product...!</div>
+        </div>
+        <div class="mb-4">
+            <label for="productCategory"  class="mb-2">Product Category :
+                <i class="fa-solid fa-certificate"></i>
+            </label>
+            <select id="productCategory" class="form-select">
+                <option value="tv">Tv</option>
+                <option value="mobile">mobile</option>
+                <option value="labtop">labtop</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="productDescription"  class="mb-2">ProductDescription :
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+            </label>
+            <textarea placeholder="Enter Description" id="productDescription" class="form-control mb-3"></textarea>
+        </div>
+        <button class="btn btn-outline-info d-inline" id="addBtn">Add Product</button>
+        <button class="btn btn-outline-info d-none" id="editBtn">Add Edit</button>
+        <button class="btn btn-outline-danger" id="clearBtn">Clear Form</button>
+    </div>
+
+    <div class="container">
+
+        <input type="text" id="inputSearch" class="form-control m-auto w-50 my-4" 
+        placeholder="Search Product..." >
+
+        <table class="table table-striped">
+            <thead>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Custom File Bootstrap js -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Jquery -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <!-- Custom file JavaScript-->
+    <script src="../js/main.js"></script>
+</body>
+</html>
